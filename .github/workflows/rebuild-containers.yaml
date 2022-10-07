@@ -1,0 +1,12 @@
+name: rebuild all containers with changes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  shiny-rsconnect:
+    uses: ./.github/workflows/build-docker.yaml
+    with:
+      directory: shiny-rsconnect
